@@ -207,13 +207,9 @@ const App: React.FC = () => {
         />
         <main className="w-full flex-grow flex items-center justify-center px-2 sm:px-3 md:px-4 py-6 sm:py-8 md:py-10">
             <div className="w-full h-full transition-all duration-300">
-                {step === 4 ? (
-                  renderStep()
-                ) : (
-                  <div className="bg-brand-surface rounded-2xl shadow-lifted p-6 sm:p-8 h-full flex flex-col border-4 border-brand-primary">
-                    {renderStep()}
-                  </div>
-                )}
+                <div className="bg-brand-surface rounded-2xl shadow-lifted p-2 sm:p-3 h-full flex flex-col border-4 border-brand-primary">
+                  {renderStep()}
+                </div>
             </div>
         </main>
       </div>
