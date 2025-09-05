@@ -1,5 +1,4 @@
 
-
 import React, { useState, useCallback } from 'react';
 import { PastProduct, SkinConditionCategory, SkincareRoutine, ChatMessage, FaceImage, CartItem, RoutineStep, AlternativeProduct } from './types';
 import Step1PastProducts from './components/Step1PastProducts';
@@ -205,11 +204,15 @@ const App: React.FC = () => {
             cartItemCount={totalCartItems} 
             onMenuClick={() => setIsSidebarOpen(true)}
         />
-        <main className="w-full flex-grow flex items-center justify-center px-2 sm:px-3 md:px-4 py-6 sm:py-8 md:py-10">
+        <main className="w-full flex-grow flex items-center justify-center px-2 sm:px-3 md:px-4 py-10 sm:py-12 md:py-16">
             <div className="w-full h-full transition-all duration-300">
-                <div className="bg-brand-surface rounded-2xl shadow-lifted p-1 sm:p-2 h-full flex flex-col border-4 border-brand-primary">
-                  {renderStep()}
-                </div>
+                {step === 4 ? (
+                  renderStep()
+                ) : (
+                  <div className="bg-brand-surface rounded-2xl shadow-lifted p-6 sm:p-8 h-full flex flex-col border-4 border-brand-primary">
+                    {renderStep()}
+                  </div>
+                )}
             </div>
         </main>
       </div>
