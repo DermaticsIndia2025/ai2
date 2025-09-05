@@ -207,7 +207,7 @@ const App: React.FC = () => {
         />
         <main className="w-full flex-grow flex items-center justify-center px-2 sm:px-3 md:px-4 py-6 sm:py-8 md:py-10">
             <div className="w-full h-full transition-all duration-300">
-                <div className="bg-brand-surface rounded-2xl shadow-lifted p-2 sm:p-3 h-full flex flex-col border-4 border-brand-primary">
+                <div className="bg-brand-surface rounded-2xl shadow-lifted p-1 sm:p-2 h-full flex flex-col border-4 border-brand-primary">
                   {renderStep()}
                 </div>
             </div>
